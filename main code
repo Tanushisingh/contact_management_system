@@ -52,4 +52,3 @@ def contact_management():
             print("Invalid choice.")
         ch=int(input("Enter choice:\n 1-'Add a contact'\n 2-'Display a contact'\n 3-'Display all the contacts'\n 4-'Modify a contact'\n 5-'Deleting a contact'\n 6-'Exit'\n"))
 contact_management()                    
-            
