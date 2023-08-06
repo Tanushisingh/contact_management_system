@@ -6,7 +6,7 @@ def contact_management():
             a=input("Enter name: ")
             b=int(input("Enter contact number: "))
             c=input("Enter email-address: ")
-            l={'Name':b,'Email':c}
+            l={'Contact Number':b,'Email':c}
             d[a]=l
         elif ch==2:
             p=input("Enter name: ")
