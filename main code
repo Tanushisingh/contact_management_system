@@ -1,0 +1,55 @@
+def contact_management():
+    d={}
+    ch=int(input("Enter choice:\n 1-'Add a contact'\n 2-'Display a contact'\n 3-'Display all the contacts'\n 4-'Modify a contact'\n 5-'Deleting a contact'\n 6-'Exit'\n"))
+    while ch!=6:
+        if ch==1:
+            a=input("Enter name: ")
+            b=int(input("Enter contact number: "))
+            c=input("Enter email-address: ")
+            l=[b,c]
+            d[a]=l
+        elif ch==2:
+            p=input("Enter name: ")
+            if p in d.keys():
+                print("'"+p+"':",d[p])
+            else:
+                print("This contact is not present.")
+        elif ch==3:
+            print(d)
+        elif ch==4:
+            g=int(input("Enter a choice:\n 1-'Change the name'\n 2-'Change the number'\n 3-'Change the email-address'\n 4-'Exit'\n"))
+            while g!=4:
+                q=input("Enter name of the contact: ")
+                if q in d.keys():
+                    if g==1:
+                        n=input("Enter new name: ")
+                        d[n]=d[q]
+                        del d[q]
+                    elif g==2:
+                        cn=int(input("Enter new contact number: "))
+                        o=d[q]
+                        o[0]=cn
+                    elif g==3:
+                        ea=input("Enter new email-address: ")
+                        f=d[q]
+                        f[1]=ea
+                    elif g==4:
+                        pass
+                    else:
+                        print("Invalid choice.")
+                else:
+                    print("This contact is not present.")
+                g=int(input("Enter choice:\n 1-'Change the name'\n 2-'Change the number'\n 3-'Change the email-address'\n 4-'Exit'\n"))
+        elif ch==5:
+            i=input("Enter name: ")
+            if i in d.keys():
+                del d[i]
+            else:
+                print("This contact is not present.")
+        elif ch==6:
+            break
+        else:
+            print("Invalid choice.")
+        ch=int(input("Enter choice:\n 1-'Add a contact'\n 2-'Display a contact'\n 3-'Display all the contacts'\n 4-'Modify a contact'\n 5-'Deleting a contact'\n 6-'Exit'\n"))
+contact_management()                    
+            
